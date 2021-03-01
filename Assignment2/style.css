@@ -1,0 +1,44 @@
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 4em;
+    margin-left: 8px;
+}
+
+nav {
+    top: 0px;
+    height: 20vh;
+    text-align: center;
+    background-color: pink;
+    position: fixed;
+    width: 100%;
+}
+
+.content {
+    margin-top: 25vh;
+}
+
+.StartingLetter {
+    left: 50px;
+    width: 95%;
+    height: 50px;
+    background-color: salmon;
+    position: sticky;
+    top: 25vh;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+table {
+    width: 95%;
+    margin-left: 40px;
+}
+
+td {
+    width: 50%;
+}
