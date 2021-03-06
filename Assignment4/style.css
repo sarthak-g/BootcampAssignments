@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #dee2e6;
+}
+
+div a {
+    background-color: #6c757d;
+    text-decoration: none;
+    color: #dee2e6;
+    font-size: 1.5rem;
+}
+
+nav {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #6c757d;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-item {
+    background-color: #6c757d;   
+}
+
+.image-banner {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    top: 10vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    animation: 15s linear carousel infinite;
+    background-image: url("https://i.pinimg.com/originals/ca/e7/2c/cae72ce86998abcadd5051acd91a696b.jpg");
+}
+
+@keyframes carousel {
+    50% {
+        background-image: url("https://blog.daraz.pk/wp-content/uploads/2020/06/MOBILE-WEEK-BANNER-1.jpg");
+    }
+    100% {
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-cool-new-mobile-phone-promotion-purple-banner-image_183067.jpg");
+    }
+}
+
+.cards {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    top: 75vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.card-a, .card-b {
+    position: absolute;
+    width: 32%;
+    height: 100%;
+}
+
+.card-a {
+    transition: z-index 1s ease-out;
+}
+
+.card-b h3 {
+    font-size: 2rem;
+}
+
+.card-b p {
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.card-a:hover {
+    z-index: 0;
+}
+
+.card-b:hover {
+    z-index: 1;
+}
+
+.imgcard-1 {
+    background-image: url("https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+}
+
+.imgcard-2 {
+    background-image: url("https://images.unsplash.com/photo-1598965402089-897ce52e8355?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=893&q=80");
+}
+
+.imgcard-3 {
+    background-image: url("https://images.unsplash.com/photo-1594978590365-c87f4116d4b4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=401&q=80");
+}
+
+.card-a {
+    z-index: 1; 
+    background-size: 100% 100%;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    top: 140vh;
+    color: #dee2e6;
+    background-color: #6c757d;
+    text-align: center;
+    font-size: 2rem;
+}
