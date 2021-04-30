@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const Review = require('./review')
 
 const blogSchema = new mongoose.Schema({
     title: {
@@ -16,7 +17,13 @@ const blogSchema = new mongoose.Schema({
     desc: {
         type: String,
         required: true
-    }
+    },
+    reviews: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Review'
+        }
+    ]
 });
 
 const Blog = mongoose.model('Blog', blogSchema)

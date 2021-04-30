@@ -21,6 +21,29 @@
     <div class="card mt-3">
         <div class="card-body">
             <h4 class="mt-3 text-center">Reviews of this blog</h4>
+            <form class="mt-5" action="/<%= blog._id %>/review" method="POST">
+                <label class="form-label" for="rating">Rating:</label><br>
+                <input class="form-range" type="range" min="0" max="5" name="review[rating]" id="rating"><br>
+                <label class="form-label" for="comment">Comment:</label>
+                <textarea class="form-control" name="review[comment]" id="comment"></textarea><br>
+                <button type="submit" class="btn btn-success">Submit Review</button>
+            </form>
+
+            <div class="mt-3">
+                <% for(review of blog.reviews) { %>
+                    <div class="card mt-2">
+                        <div class="card-body">
+                            <% for(var i=0;i<parseInt(review.rating);i++) { %>
+                                <i class="fas fa-star"></i>
+                            <% } %>
+                            <% for(var i=parseInt(review.rating);i<5;i++) { %>
+                                <i class="far fa-star"></i>
+                            <% } %>
+                            <p><%= review.comment %></p>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
         </div>
     </div>
 </div>
