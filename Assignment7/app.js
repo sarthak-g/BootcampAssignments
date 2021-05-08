@@ -1,7 +1,7 @@
 const div = document.getElementById("weatherContent");
 var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
 async function getWeatherDetails(cityName) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=483f7f73eab4ae78ea177d6586ee731b`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=<API_KEY>`;
     const response = await fetch(url);
     const fetchedData = await response.json()
     if(fetchedData.cod == "404") {
